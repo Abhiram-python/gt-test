@@ -8,9 +8,9 @@ n=0
 def home():
     global n
 
-    while 1:
-        n+=1
-        print(n)
+    # while 1:
+    #     n+=1
+    #     print(n)
 
     return render_template("index.html")
 
