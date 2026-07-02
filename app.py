@@ -4,6 +4,10 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
+
+    while 1:
+        print("ko")
+
     return render_template("index.html")
 
 if __name__ == "__main__":
