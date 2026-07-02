@@ -6,6 +6,7 @@ n=0
 
 @app.route("/")
 def home():
+    global n
 
     # while 1:
     #     print("ko")
