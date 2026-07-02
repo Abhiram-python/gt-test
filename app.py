@@ -8,11 +8,11 @@ n=0
 def home():
     global n
 
-    # while 1:
-    #     print("ko")
+    while 1:
+        print("ko")
 
-    n+=1
-    print(n)
+    # n+=1
+    # print(n)
 
     return render_template("index.html")
 
