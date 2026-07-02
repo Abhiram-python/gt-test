@@ -232,14 +232,14 @@ async def main():
     except asyncio.CancelledError: print("\n[SYSTEM] Shutting down streams gracefully...")
     finally: collector.force_resolve_pending()
 
-if __name__ == "__main__":
-    try: asyncio.run(main())
-    except KeyboardInterrupt: pass
-
 
 @app.route("/")
 def home():
     global n
+
+    if __name__ == "__main__":
+        try: asyncio.run(main())
+        except KeyboardInterrupt: pass
 
     return render_template("index.html")
 
