@@ -5,8 +5,10 @@ app = Flask(__name__)
 @app.route("/")
 def home():
 
-    while 1:
-        print("ko")
+    # while 1:
+    #     print("ko")
+
+    print("ha ha ha ha ha ha ha ha ha")
 
     return render_template("index.html")
 
