@@ -2,13 +2,16 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
+n=0
+
 @app.route("/")
 def home():
 
     # while 1:
     #     print("ko")
 
-    print("ha ha ha ha ha ha ha ha ha")
+    n+=1
+    print(n)
 
     return render_template("index.html")
 
