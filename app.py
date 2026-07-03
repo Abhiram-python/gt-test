@@ -84,9 +84,9 @@ class OrderFlowCollector:
         print("[SYSTEM] Fetching initial order book snapshot...")
         try:
             req=requests.get(REST_URL_DEPTH)
-            res = req.json()
             print(req.status_code)
             print(req.text)
+            res = req.json()
             for b in res['bids']: self.bids[float(b[0])] = float(b[1])
             for a in res['asks']: self.asks[float(a[0])] = float(a[1])
             print("[SYSTEM] Snapshot loaded successfully.")
