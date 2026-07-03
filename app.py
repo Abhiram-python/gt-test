@@ -241,9 +241,9 @@ def print_numbers():
         n+=1
         print(n)
 
-# thread = threading.Thread(target=print_numbers)
+thread = threading.Thread(target=print_numbers)
 
-# thread.start()   # Starts the thread
+thread.start()   # Starts the thread
 
 print("Main thread finished.")
 
