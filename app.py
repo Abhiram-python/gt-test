@@ -233,14 +233,29 @@ async def main():
     finally: collector.force_resolve_pending()
 
 
+import threading
+
+def print_numbers():
+    global n
+    while 1:
+        n+=1
+        print(n)
+
+thread = threading.Thread(target=print_numbers)
+
+thread.start()   # Starts the thread
+
+print("Main thread finished.")
+
+
 @app.route("/")
 def home():
     global n
 
     # if __name__ == "__main__":
-    print("\n"*5,"yes is","\n"*5)
-    try: asyncio.run(main())
-    except KeyboardInterrupt: pass
+    # print("\n"*5,"yes is","\n"*5)
+    # try: asyncio.run(main())
+    # except KeyboardInterrupt: pass
 
     return render_template("index.html")
 
