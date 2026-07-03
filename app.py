@@ -236,10 +236,8 @@ async def main():
 import threading
 
 def print_numbers():
-    global n
-    while 1:
-        n+=1
-        print(n)
+   asyncio.run(main())
+
 
 thread = threading.Thread(target=print_numbers)
 
