@@ -246,8 +246,6 @@ thread = threading.Thread(target=print_numbers)
 
 thread.start()   # Starts the thread
 
-print("Main thread finished.")
-
 
 @app.route("/")
 def home():
