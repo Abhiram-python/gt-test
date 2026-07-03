@@ -237,10 +237,10 @@ async def main():
 def home():
     global n
 
-    if __name__ == "__main__":
-        print("\n"*5,"yes is","\n"*5)
-        try: asyncio.run(main())
-        except KeyboardInterrupt: pass
+    # if __name__ == "__main__":
+    print("\n"*5,"yes is","\n"*5)
+    try: asyncio.run(main())
+    except KeyboardInterrupt: pass
 
     return render_template("index.html")
 
